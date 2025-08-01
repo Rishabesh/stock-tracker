@@ -24,7 +24,7 @@
 
 ## 🎬 Demo
 
-![GIF]https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjFvNzVmbTA5ajhicDh1NzN4YWUxZDBrbmViaWM5OTVpbjF0dTJxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mc1yxvp8fIGuYXHJI0/giphy.gif)  
+![GIF](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjFvNzVmbTA5ajhicDh1NzN4YWUxZDBrbmViaWM5OTVpbjF0dTJxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mc1yxvp8fIGuYXHJI0/giphy.gif)  
 *Visualise live stock updates with style!*  
 
 ---

@@ -24,9 +24,8 @@
 
 ## 🎬 Demo
 
-![GIF](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)  
+![GIF](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTE5cHI3ODR6bnF1OHoxb3Z5bXppNGEyd24zOWU5M3Q3dGhtNjRmZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JtBZm3Getg3dqxK0zP/giphy.gif)  
 *Visualize live stock updates with style!*  
-*(Replace with your own demo GIF or screenshot)*
 
 ---
 

@@ -1,6 +1,7 @@
 # 📈 Live Stock Tracker
 
 > A sleek, dark-themed web app to track your favourite stocks in real-time, built with vanilla HTML, CSS, and JavaScript. Powered by [Finnhub API](https://finnhub.io).
+> https://rishabesh.github.io/stock-tracker/
 
 ---
 

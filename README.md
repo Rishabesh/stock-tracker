@@ -17,15 +17,15 @@
 - 📱 Fully **responsive** for tablets and mobiles  
 - ⚡ Fast, real-time stock price updates every 15 seconds  
 - 🎨 Color-coded price changes with glowing positive/negative highlights  
-- 🔧 Easily customize your watchlist symbols  
+- 🔧 Easily customise your watchlist symbols  
 - 🌐 Runs fully client-side — no backend or installs needed!
 
 ---
 
 ## 🎬 Demo
 
-![GIF](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTE5cHI3ODR6bnF1OHoxb3Z5bXppNGEyd24zOWU5M3Q3dGhtNjRmZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JtBZm3Getg3dqxK0zP/giphy.gif)  
-*Visualize live stock updates with style!*  
+![GIF] https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjFvNzVmbTA5ajhicDh1NzN4YWUxZDBrbmViaWM5OTVpbjF0dTJxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mc1yxvp8fIGuYXHJI0/giphy.gif)  
+*Visualise live stock updates with style!*  
 
 ---
 

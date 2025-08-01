@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📈 Stock Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(145deg, #0f0f0f, #1e1e1e);
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ffcc;
+      text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+    }
+    table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+    }
+    thead {
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 700;
+      color: #00ffd5;
+    }
+    tbody tr {
+      transition: background 0.3s ease;
+    }
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .positive {
+      color: #00ff9f;
+      text-shadow: 0 0 6px rgba(0, 255, 159, 0.6);
+    }
+    .negative {
+      color: #ff5252;
+      text-shadow: 0 0 6px rgba(255, 82, 82, 0.6);
+    }
+    .error {
+      color: #ffb347;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Live Stock Tracker</h1>
+  <table id="stock-table">
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const symbols = ['ASML', 'ADS', 'IBM', 'UNH']; // Customize your list
+    const API_KEY = 'd26dv09r01qvraipqr8gd26dv09r01qvraipqr90';
+
+    async function fetchPrices() {
+      const tableBody = document.querySelector('#stock-table tbody');
+      tableBody.innerHTML = '';
+
+      for (const symbol of symbols) {
+        try {
+          const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${API_KEY}`);
+          const data = await res.json();
+
+          if (!data.c) {
+            tableBody.innerHTML += `
+              <tr>
+                <td>${symbol}</td>
+                <td colspan="2" class="error">⚠️ No data</td>
+              </tr>
+            `;
+            continue;
+          }
+
+          const price = parseFloat(data.c).toFixed(2);
+          const change = parseFloat(data.d).toFixed(2);
+          const isPositive = parseFloat(change) >= 0;
+
+          const row = `
+            <tr>
+              <td>${symbol}</td>
+              <td>${price}</td>
+              <td class="${isPositive ? 'positive' : 'negative'}">${change}</td>
+            </tr>
+          `;
+          tableBody.innerHTML += row;
+
+        } catch (err) {
+          tableBody.innerHTML += `
+            <tr>
+              <td>${symbol}</td>
+              <td colspan="2" class="error">⚠️ Network error</td>
+            </tr>
+          `;
+          console.error(`Error fetching ${symbol}:`, err);
+        }
+      }
+    }
+
+    fetchPrices();
+    setInterval(fetchPrices, 15000); // 15-second updates
+  </script>
+</body>
+</html>
